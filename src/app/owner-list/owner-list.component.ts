@@ -14,7 +14,7 @@ export class OwnerListComponent implements OnInit {
 
   ngOnInit() {
     this.ownerService.getAll().subscribe(data => {
-      this.owners = data;
+      this.owners = data._embedded.owners;
     });
   }
 }
