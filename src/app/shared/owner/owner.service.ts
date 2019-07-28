@@ -14,7 +14,11 @@ export class OwnerService {
     return this.http.get(this.OWNER_API);
   }
 
-  get(id: string) {
+  getByDni(dni: string) {
+    return this.http.get(this.API + '/owner?dni=' + dni);
+  }
+
+  getById(id: string) {
     return this.http.get(this.OWNER_API + '/' + id);
   }
 
