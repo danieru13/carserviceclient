@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">
   <span>Welcome to {{title}}!</span>
+  <a id="car-link" mat-fab [routerLink]="['/car-list']">Cars</a>
+  <a id="owner-link" mat-fab [routerLink]="['/owner-list']">Owners</a>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

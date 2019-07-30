@@ -1,0 +1,11 @@
+#car-link {
+    position: absolute;
+    right: 70px;
+    font-weight: bold;
+}
+
+#owner-link {
+    position: absolute;
+    right: 5px;
+    font-weight: bold;
+}
