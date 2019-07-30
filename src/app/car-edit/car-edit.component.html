@@ -9,12 +9,11 @@
           <input matInput placeholder="Car Name" [(ngModel)]="car.name"
                  required name="name" #name>
         </mat-form-field>
-        <mat-form-field>
+        <!--<mat-form-field>
           <input matInput placeholder="Owner dni" [(ngModel)]="car.ownerDni" required name="ownerDni" #ownerDni>
-        </mat-form-field>
-
+        </mat-form-field>-->
         <mat-form-field>
-          <mat-select [(ngModel)]="car.ownerDni" required name="ownerDni" #ownerDni>
+          <mat-select [(ngModel)]="car.ownerDni" placeholder="Owner dni"  name="ownerDni" #ownerDni>
             <mat-option *ngFor="let owner of owners" [value]="owner.dni">
               {{owner.dni}}
             </mat-option>
