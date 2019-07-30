@@ -23,18 +23,10 @@ export class OwnerEditComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe(params => {
       const dni = params['dni'];
       if (dni) {
-        this.ownerService.getByDni(dni).subscribe((owner: any) => {
+        this.ownerService.get(dni).subscribe((owner: any) => {
           if (owner) {
             this.owner = owner[0];
-            console.log(this.owner)
-            this.ownerService.getById(this.owner.id).subscribe((ownerById: any) => {
-              if (ownerById) {
-                this.owner.href = ownerById._links.self.href;
-              } else {
-                console.log(`Owner with id '${this.owner.id}' not found, returning to list`);
-                this.gotoList();
-              }
-            })
+            this.owner.href = this.ownerService.OWNER_API + '/' + this.owner.id;
           } else {
             console.log(`Owner with dni '${dni}' not found, returning to list`);
             this.gotoList();

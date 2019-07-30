@@ -14,12 +14,8 @@ export class OwnerService {
     return this.http.get(this.OWNER_API);
   }
 
-  getByDni(dni: string) {
+  get(dni: string) {
     return this.http.get(this.API + '/owner?dni=' + dni);
-  }
-
-  getById(id: string) {
-    return this.http.get(this.OWNER_API + '/' + id);
   }
 
   save(owner: any): Observable<any> {
