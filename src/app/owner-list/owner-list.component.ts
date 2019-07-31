@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwnerService } from '../shared/owner/owner.service';
 
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-owner-list',

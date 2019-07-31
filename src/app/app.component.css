@@ -9,3 +9,9 @@
     right: 5px;
     font-weight: bold;
 }
+
+#car-owners-link {
+    position: absolute;
+    right: 135px;
+    font-weight: bold;
+}
